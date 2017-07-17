@@ -1,4 +1,5 @@
 import yahoo_finance.yql
+import yahoo_finance.gp
 
 from datetime import datetime, timedelta
 import pytz
@@ -346,3 +347,15 @@ class Share(Base):
             except AttributeError:
                 pass
         return hist
+
+    def get_historical2(self, start_date, end_date):
+        '''
+        Get historical data via a different method because YQL is shut down
+        :param start_date: string date in format '2009-09-11'
+        :param end_date: string date in format '2009-09-11'
+        :return: list
+        '''
+        hist = gp.get_hist(self.symbol, start_date, end_date)
+
+        return hist
+
