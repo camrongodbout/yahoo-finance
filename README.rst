@@ -10,8 +10,8 @@ modified __init__.py to import gp.py file
 gp.py contains a new function get_historical2() which uses a different method to get historical data, albeit slower
 will provide similiar output as get_historical(), but will actually work
 
-New Method
--------
+#New Method
+
 
 - ``get_historical2(self, start_date, end_date)``
 
