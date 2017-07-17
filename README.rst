@@ -3,9 +3,17 @@
 Historical data is broken
 https://forums.yahoo.net/t5/Yahoo-Finance-help/has-yahoo-stopped-history-data-api-service/td-p/231325
 
+gpaw789/yahoo-finance fixes it
+
 borrowed code from Brad Lucas https://github.com/bradlucas/get-yahoo-quotes-python
 modified __init__.py to import gp.py file
 gp.py contains a new function get_historical2() which uses a different method to get historical data, albeit slower
+will provide similiar output as get_historical(), but will actually work
+
+New Method
+-------
+
+- ``get_historical2(self, start_date, end_date)``
 
 
 ############################## Original Application ###################################
